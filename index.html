@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Team Randomize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="tR.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- google tajawal font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+
+    <!-- fontawomse  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- sweet alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha2\56-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <!-- preloader -->
+    <section id="preloader">
+        <marquee behavior="alternate" scrollamount="40">
+            <marquee behavior="alternate" direction="down" scrollamount="30">
+                <img src="football-no-background.png" class="ball">
+            </marquee>
+        </marquee>
+    </section>
+
+    <div class="container">
+        <h1>قسم فرقتك بشكل عشوائي ومتخليش حد يضحك عليك 😉</h1>
+        <div class="imgs">
+            <img src="football-no-background.png" class="ball2 box bounce-7">
+            <img src="player.gif" class="gif">
+        </div>
+        <h2> عدد اللاعبين</h2>
+        <input placeholder="ادخل عدد اللاعبين" type="number" id="pl_num">
+        <div onclick="generatePlayers();" class="apply" id="apply">تأكيد</div>
+    </div>
+
+    <div id="players">
+
+    </div>
+    <div id="team1">
+
+    </div>
+    <div id="team2">
+
+    </div>
+</body>
+<script src="tR.js"></script>
+
+</html>

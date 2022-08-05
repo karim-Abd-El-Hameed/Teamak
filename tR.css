@@ -1,0 +1,257 @@
+
+*{
+    font-family: 'Tajawal', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    /* background-color: rgb(49, 49, 49); */
+    background-color: #85FFB2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='48.1' stroke-opacity='0.06' %3E%3Ccircle fill='%2385FFB2' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%237cf0a8' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2373e29e' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%236bd494' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2362c68a' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%235ab880' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2352aa76' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%234a9d6d' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23429063' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%233b835a' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23337651' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%232c6947' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23255d3f' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%231e5136' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%2318452d' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23113a25' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%230b2f1d' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23062415' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#preloader {
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: url(stadium.jpg);
+    background-size: cover;
+}
+marquee{
+    height: 100vh
+}
+
+.ball{
+    max-width: 300px;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container {
+    padding: 3px;
+    margin:0px;
+    direction: rtl;
+    color: whitesmoke;
+    overflow-x: hidden;
+    text-align: center;
+}
+.container h1{
+    text-align: center;
+    background-color: #14141471;
+    padding: 10px;
+    margin: 10px;
+    font-size:27px;
+    font-weight: normal;
+    border-radius: 40px;
+}
+h2 {
+    margin-top: 70px;
+    margin-bottom: 5px;
+}
+.ball2 {
+    width: 400px;
+    /* float: left; */
+}
+.imgs {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    background-color: #14141442;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 40px;
+}
+
+.gif {
+    width: 400px;
+}
+
+.box {
+    align-self: flex-end;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    height:200px;
+    /* margin: 0 auto 0 auto; */
+    transform-origin: bottom;
+    width: 200px;
+}
+.bounce-7 {
+    animation-name: bounce-7;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-7 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+@media (max-width: 800px) {
+    .imgs {
+        flex-direction: column-reverse;
+    }
+    .ball{
+        max-width: 150px;
+    }
+    .box {
+        align-self: flex-end;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        height: 100px;
+        margin: 0 auto 0 auto;
+        margin-top: 70px;
+        transform-origin: bottom;
+        width: 100px;
+    }
+    .gif {
+        width: 300px;
+    }
+}
+/* scrollbar */
+html {
+    --scrollbarBG: #c2c9cc;
+    --thumbBG: #141414;
+    overflow-x: hidden;
+  }
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+
+
+  /* hide input number arrows */
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#pl_num{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 130px;
+}
+#players p {
+    font-size: 25px;
+    color: whitesmoke;
+    background-color: #14141442;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 40px;
+    font-weight: 550;
+}
+ input:focus{
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.548) 0px 5px 15px;
+}
+.apply {
+    display: inline-block;
+    background-color: #14121491;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.apply:hover, .apply:focus {
+    background-color: #141214d7;
+}
+
+#players {
+    direction: rtl;
+    text-align: center;
+}
+.playersH1 {
+    display: inline-block;
+    width: 200px;
+    color: whitesmoke;
+}
+/* input fields for names */
+.players_names {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+.options {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #141414a9;
+}
+#team1 , #team2 {
+    text-align: right;
+    direction: rtl;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    color: rgba(245, 245, 245, 0.89);
+}
+#team1 {
+    background-color: rgba(255, 0, 0, 0.493);
+}
+#team2 {
+    background-color: rgba(13, 0, 128, 0.39);
+}
+.fa-arrow-left {
+    margin-left: 10px;
+}
+#team1 h1 , #team2 h1 {
+    color: black;
+}
+.team1, .team2 {
+    color: whitesmoke;
+}
